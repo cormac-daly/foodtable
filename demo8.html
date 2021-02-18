@@ -1,0 +1,347 @@
+<html>
+
+<head>
+    <style>
+        :root {
+            --trapezium-height : 90px;
+        }
+
+        body{
+            font: 14/24px Arial, sans-serif;
+        }
+
+        .wrap{
+            text-align: center;
+            background-color: grey;
+            width: 400px;
+            height: var(--trapezium-height);
+            color: white;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .wrap::before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: var(--trapezium-height)solid grey;
+            border-left: var(--trapezium-height)solid transparent;
+            position: absolute;
+            right: 100px;
+            top: 0px;
+            
+             }
+        .wrap::after{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: var(--trapezium-height)solid grey;
+            border-right: var(--trapezium-height)solid transparent;
+            position: absolute;
+            right: 100px;
+            top: 0px;
+
+        }
+
+        .inner {
+            align-self: center;
+            padding: 2rem;
+        }
+
+        .numberCircle{
+            display: inline-block; 
+            
+            text-align: baseline;
+            border-radius: 50%;
+            border : 1px solid;
+            font-size: 32px;
+            background-color: white;
+        }
+        .numberCircle:before,
+        .numberCircle:after{
+            content: '\200B';
+            display: inline-block;
+            line-height: 0px;
+            padding-top: 50%;
+            padding-bottom: 50%;
+        }
+
+        .numberCircle:before{
+            padding-left: 0.35em;
+
+        }
+
+        .numberCircle1:after{
+            padding-right: 0.35em;
+        }
+
+        .numberCircle1:hover{
+            background-color: blue;
+
+        }
+        .tabluar{
+            font-family: monospace;
+        }
+        .numberCircle1{
+            display: inline-block; 
+            margin-top: 70px;
+            text-align: baseline;
+            border-radius: 50%;
+            border : 1px solid;
+            font-size: 32px;
+            background-color: white;
+        }
+        .numberCircle1:before,
+        .numberCircle1:after{
+            content: '\200B';
+            display: inline-block;
+            line-height: 0px;
+            padding-top: 50%;
+            padding-bottom: 50%;
+        }
+
+        .numberCircle1:before{
+            padding-left: 0.35em;
+
+        }
+
+        .numberCircle1:after{
+            padding-right: 0.35em;
+        }
+
+        .numberCircle1:hover{
+            background-color: blue;
+
+        }
+
+        .trapezium{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            width: 235px;
+            height: 90px;
+            position: relative;
+            margin: auto auto;
+        }
+
+        .trapezium::before{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 90px solid blue;
+            border-left: 90px solid transparent;
+            position: absolute;
+            right: 100%;
+            top: 0px;
+        }
+        .trapezium::after{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 90px solid blue;
+            border-right: 90px solid transparent;
+            position: absolute;
+            left: 100%;
+            top: 0px;
+        }
+        img:hover + .numberCircle,.trapezium:hover{
+            display: inline-block;
+        }
+        .traingle{
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            margin-top: 1000px;
+            white-space: nowrap;
+            width: 0;
+            height: 0;
+            border-left: 110px solid transparent;
+            border-right: 110px solid transparent;
+            border-bottom: 150px solid yellow;
+            position: relative;
+            margin: auto auto;
+        }
+
+
+        .trapezium2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            width: 440px;
+            height: 90px;
+            position: relative;
+            margin: auto auto;
+        }
+
+        .trapezium2::before{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 90px solid orange;
+            border-left: 90px solid transparent;
+            position: absolute;
+            right: 100%;
+            top: 0px;
+        }
+        .trapezium2::after{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 90px solid orange;
+            border-right: 90px solid transparent;
+            position: absolute;
+            left: 100%;
+            top: 0px;
+        }
+        .trapezium3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: green;
+            width: 620px;
+            height: 90px;
+            position: relative;
+            margin: auto auto;
+        }
+
+        .trapezium3::before{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 90px solid green;
+            border-left: 90px solid transparent;
+            position: absolute;
+            right: 100%;
+            top: 0px;
+        }
+        .trapezium3::after{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 90px solid green;
+            border-right: 90px solid transparent;
+            position: absolute;
+            left: 100%;
+            top: 0px;
+        }
+        .trapezium4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+            width: 800px;
+            height: 90px;
+            position: relative;
+            margin: auto auto;
+        }
+
+        .trapezium4::before{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 90px solid purple;
+            border-left: 90px solid transparent;
+            position: absolute;
+            right: 100%;
+            top: 0px;
+        }
+        .trapezium4::after{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 90px solid purple;
+            border-right: 90px solid transparent;
+            position: absolute;
+            left: 100%;
+            top: 0px;
+        }
+        .trapezium5{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            width: 983px;
+            height: 100px;
+            position: relative;
+            margin: auto auto;
+        }
+
+        .trapezium5::before{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 100px solid pink;
+            border-left: 100px solid transparent;
+            position: absolute;
+            right: 100%;
+            top: 0px;
+        }
+        .trapezium5::after{
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-bottom: 100px solid pink;
+            border-right: 100px solid transparent;
+            position: absolute;
+            left: 100%;
+            top: 0px;
+        }
+       
+
+
+
+
+    </style>
+</head>
+
+    <body>
+        <h1>Food pyramid 
+
+        </h1>
+
+        <br />
+        <div>
+            <div class="traingle">
+                <span class="numberCircle1 tabluar">+</span>
+                <span class="numberCircle1 tabluar">3</span>
+                <span class="numberCircle1 tabluar">-</span>
+            </div>
+        </div>
+            <br />
+            <div class="trapezium">
+                <span class="numberCircle tabluar">+</span>
+                <span class="numberCircle tabluar">3</span>
+                <span class="numberCircle tabluar">-</span>
+            </div>
+            <br />
+         <div>
+                <div class="trapezium2">
+                    <span class="numberCircle tabluar">+</span>
+                    <span class="numberCircle tabluar">2</span>
+                    <span class="numberCircle tabluar">-</span>
+                </div>
+    
+            
+            <div>
+                <div class="trapezium3">
+                    <span class="numberCircle tabluar">+</span>
+                    <span class="numberCircle tabluar">4</span>
+                    <span class="numberCircle tabluar">-</span>
+                </div>
+                
+            <div>
+                 <div class="trapezium4">
+                    <span class="numberCircle tabluar">+</span>
+                    <span class="numberCircle tabluar">4</span>
+                     <span class="numberCircle tabluar">-</span>
+                 </div>
+             <div>
+                    <div class="trapezium5">
+                        <span class="numberCircle tabluar">+</span>
+                        <span class="numberCircle tabluar">6</span>
+                        <span class="numberCircle tabluar">-</span>
+                 </div>  
+    </body>
+</html>
